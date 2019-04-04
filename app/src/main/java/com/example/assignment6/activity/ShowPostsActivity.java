@@ -77,7 +77,7 @@ public class ShowPostsActivity extends AppCompatActivity {
 
                 if (!response.isSuccessful()) {
                     Toast.makeText(ShowPostsActivity.this,
-                            "Code: " + response.code(), Toast.LENGTH_SHORT).show();
+                            ""+ response.code(), Toast.LENGTH_SHORT).show();
                     return;
                 }
                 userPostsList = response.body();
@@ -88,7 +88,7 @@ public class ShowPostsActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<ArrayList<UserPosts>> call, Throwable t) {
                 Toast.makeText(ShowPostsActivity.this,
-                        "Couldn't get Response " + t + " got thrown", Toast.LENGTH_SHORT).show();
+                        getString(R.string.toast_error), Toast.LENGTH_SHORT).show();
             }
         });
 

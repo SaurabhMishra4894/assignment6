@@ -92,7 +92,7 @@ public class ShowUsersActivity extends AppCompatActivity implements OnUserItemCl
              */
             @Override
             public void onFailure(Call<ArrayList<User>> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.toast_error), Toast.LENGTH_SHORT).show();
             }
         });
     }
